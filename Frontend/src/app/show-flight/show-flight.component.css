@@ -1,0 +1,46 @@
+button {
+    margin-bottom: 20px;
+  }
+  
+  .panel {
+    margin-top: 20px;
+  }
+  
+  .panel-heading {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 15px;
+  }
+  
+  .panel-body {
+    padding: 15px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #337ab7;
+    color: #fff;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ddd;
+  }
+  
+  .btn {
+    margin-left: 10px;
+  }
+  

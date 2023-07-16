@@ -1,0 +1,62 @@
+<form #myForm="ngForm">
+    <h3>Search Flight</h3>
+    <label for="source">Enter source</label><br />
+    <input
+      type="text"
+      name="source"
+      id="source"
+      [(ngModel)]="sourceName"
+      required
+      #source="ngModel"
+      [ngClass]="{ 'is-invalid': source.touched && source.errors }"
+    />
+      <small *ngIf="source.touched && source.errors && source.errors['required']">source is required</small>
+      <br>
+      <label for="destination">Enter destination</label><br />
+    <input
+      type="text"
+      name="destination"
+      id="destination"
+      [(ngModel)]="destinationName"
+      required
+      #destination="ngModel"
+      [ngClass]="{ 'is-invalid': destination.touched && destination.errors }"
+    />
+      <small *ngIf="destination.touched && destination.errors && destination.errors['required']">destination is required</small>
+      <br>
+  
+    <button mat-raised-button color="accent" (click)="searchData()" [disabled]="!myForm.valid">Search</button>
+  </form>
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Flight List</h2>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>FlightNo</th>
+              <th>boardingStation</th>
+              <th>destination</th>
+              <th>timing</th>
+              <th>date</th>
+              <th>fair</th>
+              <!-- <th>ticketsAvailable</th>     -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let t of td">
+              <td>{{t.name}}</td>
+              <td>{{t.flightNo}}</td>
+              <td>{{t.boardingStation}}</td>
+              <td>{{t.destination}}</td>
+              <td>{{t.timing}}</td>
+              <td>{{t.date}}</td>
+              <td>{{t.fair}}</td>
+              <!-- <td>{{t.ticketsAvailable}}</td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>

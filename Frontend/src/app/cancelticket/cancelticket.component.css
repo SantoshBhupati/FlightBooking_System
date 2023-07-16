@@ -1,0 +1,68 @@
+div{
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    width: 600px;
+    height: auto;
+    position: relative;
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 14px 16px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* border: none; */
+    background: linear-gradient(to left bottom,#faf0f0,rgb(250, 250, 254));
+}
+
+body{
+    padding-top: 100px;
+    padding-bottom: 200px;
+    background-color: #D6DBDF;
+}
+
+input{
+    width: 100%;
+    padding: 5px;
+    margin: 4px;
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent input background */
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding box shadow */
+    /* font-weight: bold;  */
+}
+
+label{
+    margin: 5px;
+}
+
+select{
+    margin: 4px;
+    width: 100%;
+    height: 40px;
+}
+
+button{
+    border: none;
+    margin-top: 20px;
+    margin-left: 150px;
+    width: 250px;
+    height: 50px;
+    background-color: #85C1E9  ;
+    border-radius: 3px;
+}
+
+option{
+    padding: 4px;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red ;
+}
+small{
+    color: red;
+    padding-left: 6px;
+}
+.invalid-feedback{
+    width: 100%;
+}
+h3{
+    text-align: center;
+}

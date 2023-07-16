@@ -1,0 +1,36 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Flight List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>FlightNo</th>
+            <th>boardingStation</th>
+            <th>destination</th>
+            <th>timing</th>
+            <th>date</th>
+            <th>fair</th>
+            <th>Action</th>      
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let t of td">
+            <td>{{t.id}}</td>
+            <td>{{t.name}}</td>
+            <td>{{t.flightNo}}</td>
+            <td>{{t.boardingStation}}</td>
+            <td>{{t.destination}}</td>
+            <td>{{t.timing}}</td>
+            <td>{{t.date}}</td>
+            <td>{{t.fair}}</td>
+            <td><button (click)="updateUser(t.id)" class="btn btn-warning" 
+              style="margin-left: 10px">Update</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

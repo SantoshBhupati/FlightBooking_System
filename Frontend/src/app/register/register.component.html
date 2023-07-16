@@ -1,0 +1,56 @@
+  <div class="form" style="border: 1px solid black;">
+    <form #myForm="ngForm">
+      <h3>Create Account</h3>
+      <label for="username">Username</label><br />
+      <input
+        type="text"
+        name="username"
+        id="username"
+        [(ngModel)]="user.username"
+        required
+        minlength="3"
+        maxlength="20"
+        #username="ngModel"
+        [ngClass]="{ 'is-invalid': username.touched && username.errors }"
+      />
+        <small *ngIf="username.touched && username.errors && username.errors['required']">Username is required</small>
+        <small *ngIf="username.touched && username.errors && username.errors['minlength']">Username must be at least 3 characters</small
+        ><br>
+      <label for="email">Email</label><br />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        [(ngModel)]="user.email"
+        required
+        email
+        #email="ngModel"
+        [ngClass]="{ 'is-invalid': email.touched && email.errors }"
+      />
+        <small *ngIf="email.touched && email.errors && email.errors['required']">Email is required</small>
+        <small *ngIf="email.touched && email.errors && email.errors['email']">Email must be a valid email address</small
+        ><br>
+      
+      <label for="password">Password</label><br />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        [(ngModel)]="user.password"
+        required
+        minlength="6"
+        #password="ngModel"
+        [ngClass]="{ 'is-invalid': password.touched && password.errors }"
+      /> <br>
+        <small *ngIf="password.touched && password.errors && password.errors['required']">Password is required</small>
+        <small *ngIf="password.touched && password.errors && password.errors['minlength']">Password must be at least 6 characters</small
+        ><br>
+
+      <button mat-raised-button color="accent" (click)="onCreateAccount()" [disabled]="!myForm.valid">Create Account</button>
+      <hr>
+      <span style="margin-left: 170px;">
+      Already have account? <a routerLink="/login" style="text-decoration: none;">signin</a> 
+      </span>
+    </form>
+  </div>
+

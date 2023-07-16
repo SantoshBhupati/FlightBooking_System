@@ -1,0 +1,95 @@
+<p>
+  <mat-toolbar color="primary">
+    <!-- <a
+      role="button"
+      style="text-decoration: none"
+      (click)="onClickElectronicShopping()"
+    >
+      <span style="color: white">
+        Flight Booking</span
+      >
+    </a> -->
+    <a> <span style="color: white;margin-left: 15px;">
+      Flight Booking</span
+    ></a>
+    &nbsp;<button mat-raised-button color="primary" *ngIf="!isLoggedIn">
+      <div class="navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              style="color: white"
+            >
+              User
+            </a>
+            <ul class="dropdown-menu dropdown-menu-light">
+              <li>
+                <a class="dropdown-item" href="#" routerLink="/signup"
+                  >SignUp</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" routerLink="/login">SignIn</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </button>
+  </mat-toolbar>
+  <mat-toolbar *ngIf="!isLoggedIn">
+    <button mat-raised-button routerLink="/front-page">Home</button>
+  </mat-toolbar>
+  <mat-toolbar *ngIf="isLoggedIn">
+    <a mat-raised-button routerLink="">
+      <mat-icon>home</mat-icon>
+    </a>
+    <button mat-raised-button *ngIf="AddTrains" routerLink="/addTrains">
+      Add Flight
+    </button>
+    <button mat-raised-button *ngIf="searchTrains" routerLink="/search">
+      Search
+    </button>
+    <button mat-raised-button *ngIf="showTrain" routerLink="/show">
+      Show
+    </button>
+    <button mat-raised-button *ngIf="delete" routerLink="/delete">
+      Delete
+    </button>
+    <button mat-raised-button *ngIf="book" routerLink="/book">
+      Book
+    </button>
+    <button mat-raised-button *ngIf="cancel" routerLink="/cancel">
+      Cancel Booking
+    </button>
+
+    &nbsp;<button mat-raised-button>
+      <div class="navbar-collapse">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              id="color"
+            >
+              Account
+            </a>
+            <ul class="dropdown-menu dropdown-menu-light">
+              <li>
+                <a class="dropdown-item" href="#" (click)="onLogout()"
+                  >Logout</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </button>
+  </mat-toolbar>
+</p>
+ 

@@ -1,0 +1,44 @@
+    <div class="container">
+    <div class="form">
+        <form #myForm="ngForm">
+            <img
+            id="profile-img"
+            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+            class="profile-img-card"
+          /> <br>
+            <label for="username">Username</label>
+            <input 
+             type="text" 
+             id="username"  
+             name="username" 
+             value="username"
+             [(ngModel)]="userlogin.username"
+             required
+             minlength="3"
+             maxlength="20"
+             #username="ngModel"
+             [ngClass]="{'is-invaild':username.touched && username.errors}">
+                <small *ngIf="username.touched && username.errors && username.errors['required']">*Username is required</small>
+                <small *ngIf="username.touched && username.errors && username.errors['minlength']">*Username must be at least 3 characters</small><br>
+            <label for="password">Password</label>
+            <input 
+             type="password" 
+             id="password" 
+             name="password" 
+             value="password"
+             [(ngModel)]="userlogin.password"
+             required
+             minlength="6"
+             #password="ngModel"
+             [ngClass]="{ 'is-invalid': password.touched && password.errors }"
+             ><br>
+                <small *ngIf="password.touched && password.errors && password.errors['required']">*Password is required</small>
+                <small *ngIf="password.touched && password.errors && password.errors['minlength']">*Password must be at least 6 characters</small><br>
+            <button  mat-raised-button color="accent" (click)="onLogin()" [disabled]="!myForm.valid">Login</button>
+            <hr>
+            <span style="margin-left: 130px;">
+            New user? <a routerLink="/signup" style="text-decoration: none;">signup</a> 
+        </span>
+        </form>
+    </div>
+</div>

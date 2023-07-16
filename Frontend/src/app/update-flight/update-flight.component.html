@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="form-wrapper">
+<h3>Update Flight</h3>
+<div class="mat-elevation-z2" style="width: 500px;">
+  <form class="mat-form" (ngSubmit)="onSubmit()">
+    <div class="mat-form-field">
+      <label for="name">Flight Name</label>
+      <input type="text" class="mat-input" id="Name" required [(ngModel)]="flight.name" name="Name">
+    </div>
+
+    <div class="mat-form-field">
+      <label for="name">Flight No</label>
+      <input type="text" class="mat-input" id="tno" required [(ngModel)]="flight.flightNo" name="tno">
+    </div>
+
+    <div class="mat-form-field">
+      <label for="name">boarding Station</label>
+      <input type="text" class="mat-input" id="bs" required [(ngModel)]="flight.boardingStation" name="bs">
+    </div>
+
+    <div class="mat-form-field">
+      <label for="name">destination</label>
+      <input type="text" class="mat-input" id="ds" required [(ngModel)]="flight.destination" name="ds">
+    </div>
+
+    <div class="mat-form-field">
+      <label for="name">timing</label>
+      <input type="text" class="mat-input" id="time" required [(ngModel)]="flight.timing" name="time">
+    </div>
+
+    <div class="mat-form-field">
+      <label for="name">date</label>
+      <input type="date" class="mat-input" id="dte" required [(ngModel)]="flight.date" name="dte">
+    </div>
+
+    <div class="mat-form-field">
+      <label for="name">fair</label>
+      <input type="number" class="mat-input" id="Fair" required [(ngModel)]="flight.fair" name="Fair">
+    </div>
+
+    <!-- <div class="mat-form-field">
+      <label for="name">ticketsAvailable</label>
+      <input type="number" class="mat-input" id="ta" required [(ngModel)]="train.ticketsAvailable" name="ta">
+    </div> -->
+
+    <button type="submit" class="mat-button mat-raised-button mat-primary">Submit</button>
+  </form>
+</div>
+</div>
+</div>
+

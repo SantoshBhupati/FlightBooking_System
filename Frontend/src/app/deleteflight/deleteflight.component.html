@@ -1,0 +1,21 @@
+<div class="form" style="border: 1px solid black;">
+    <form #myForm="ngForm">
+      <h3>Delete Flight Details</h3>
+      <label for="cancelId">Enter Flight ID</label><br />
+      <input
+        type="number"
+        name="deleteId"
+        id="deleteId"
+        [(ngModel)]="deleteid"
+        required
+        #deleteId="ngModel"
+        [ngClass]="{ 'is-invalid': deleteId.touched && deleteId.errors }"
+      />
+        <small *ngIf="deleteId.touched && deleteId.errors && deleteId.errors['required']">Flight ID is required</small>
+        <br>
+        <br>
+        
+
+      <button mat-raised-button color="accent" (click)="deleteFlight()" [disabled]="!myForm.valid">Delete</button>
+    </form>
+  </div>

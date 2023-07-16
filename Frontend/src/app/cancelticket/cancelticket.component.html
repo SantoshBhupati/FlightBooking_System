@@ -1,0 +1,19 @@
+<div class="form" style="border: 1px solid black;">
+    <form #myForm="ngForm">
+      <h3>Cancel Your Booking</h3>
+      <label for="cancelId">Enter Your Booking ID</label><br />
+      <input
+        type="text"
+        name="cancelId"
+        id="cancelId"
+        [(ngModel)]="cancellationid"
+        required
+        #cancelId="ngModel"
+        [ngClass]="{ 'is-invalid': cancelId.touched && cancelId.errors }"
+      />
+        <small *ngIf="cancelId.touched && cancelId.errors && cancelId.errors['required']">Booking ID is required</small>
+        <br>
+
+      <button mat-raised-button color="accent" (click)="onCancelBooking()" [disabled]="!myForm.valid">Cancel Booking</button>
+    </form>
+  </div>

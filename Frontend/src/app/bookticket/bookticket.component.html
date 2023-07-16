@@ -1,0 +1,101 @@
+<div class="form" style="border: 1px solid black;">
+    <form #myForm="ngForm">
+      <h3>Book Your Tickets</h3>
+      <label for="name">Enter FirstName</label><br />
+      <input
+        type="text"
+        name="name"
+        id="name"
+        [(ngModel)]="bk.firstName"
+        required
+        #name="ngModel"
+        [ngClass]="{ 'is-invalid': name.touched && name.errors }"
+      />
+        <small *ngIf="name.touched && name.errors && name.errors['required']">First name is Required</small>
+        <br>
+
+        <label for="lname">Enter LastName</label><br />
+      <input
+        type="text"
+        name="lname"
+        id="lname"
+        [(ngModel)]="bk.lastName"
+        required
+        #lname="ngModel"
+        [ngClass]="{ 'is-invalid': lname.touched && lname.errors }"
+      />
+        <small *ngIf="lname.touched && lname.errors && lname.errors['required']">Last name is Required</small>
+        <br>
+
+        <label for="lname">Enter Email</label><br />
+      <input
+        type="text"
+        name="em"
+        id="em"
+        [(ngModel)]="bk.email"
+        required
+        #em="ngModel"
+        [ngClass]="{ 'is-invalid': em.touched && em.errors }"
+      />
+        <small *ngIf="em.touched && em.errors && em.errors['required']">Email is Required</small>
+        <br>
+        
+        <label for="lname">Enter FlightName</label><br />
+        <input
+          type="text"
+          name="TrainNo"
+          id="TrainNo"
+          [(ngModel)]="bk.flightName"
+          required
+          #TrainNo="ngModel"
+          [ngClass]="{ 'is-invalid': TrainNo.touched && TrainNo.errors }"
+        />
+          <small *ngIf="TrainNo.touched && TrainNo.errors && TrainNo.errors['required']">FlightName is Required</small>
+          <br>
+
+            <label for="lname">source</label><br />
+      <input
+        type="text"
+        name="source"
+        id="source"
+        [(ngModel)]="bk.source"
+        required
+        #source="ngModel"
+        [ngClass]="{ 'is-invalid': source.touched && source.errors }"
+      />
+        <small *ngIf="source.touched && source.errors && source.errors['required']">source is Required</small>
+        <br>
+      
+        <label for="lname">Destination</label><br />
+        <input
+          type="text"
+          name="destination"
+          id="destination"
+          [(ngModel)]="bk.destination"
+          required
+          #destination="ngModel"
+          [ngClass]="{ 'is-invalid': destination.touched && destination.errors }"
+        />
+          <small *ngIf="destination.touched && destination.errors && destination.errors['required']">destination is Required</small>
+          <br>
+        <label for="Travellers">Enter Number Of Travellers</label><br />
+      <input
+        type="number"
+        name="Travellers"
+        id="Travellers"
+        [(ngModel)]="bk.numberOfTravellers"
+        required
+        #Travellers="ngModel"
+        [ngClass]="{ 'is-invalid': Travellers.touched && Travellers.errors }"
+      />
+        <small *ngIf="Travellers.touched && Travellers.errors && Travellers.errors['required']">Travellers is Required</small>
+        <br>
+  
+      <button mat-raised-button color="accent" (click)="book()" [disabled]="!myForm.valid">Book</button>
+    </form>
+  
+    <div class="footer">
+      <p class="footer-text">© 2023 Flight Booking. All rights reserved.</p>
+    </div>
+  </div>
+  <br>

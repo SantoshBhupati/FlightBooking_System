@@ -1,0 +1,65 @@
+h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+  }
+.mat-form-field{
+  background-color: #efefef;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+  div {
+    width: 500px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #0a0a0a;
+    font-size: 16px;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin: 4px;
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent input background */
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding box shadow */
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .btn-success {
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  .btn-success:hover {
+    background-color: #45a049;
+  }
+  
